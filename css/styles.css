@@ -1,0 +1,130 @@
+/* Fijar altura absoluta para evitar que cambie */
+.album-list {
+    height: 250px; /* Altura pequeña fija */
+    overflow-y: auto; /* Scroll vertical solo si el contenido excede la altura */
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/* Ajustar el contenedor principal para que tome el alto de la pantalla */
+.container-fluid,
+.row.h-100,
+.col-md-8.d-flex.flex-column {
+    height: 100vh;
+}
+
+/* Ajustar el contenedor para asegurar que tome el alto de la pantalla */
+.container-fluid,
+.row.h-100,
+.col-md-8.d-flex.flex-column {
+    height: 100vh;
+}
+
+.album-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.album-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.trash-icon {
+    cursor: pointer;
+    color: red;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Evita el scroll vertical y horizontal */
+}
+
+@media (max-width: 768px) {
+    /* Si el contenido no cabe en la pantalla, aseguramos que se muestre el scrollbar */
+    body {
+        overflow: auto;
+    }
+}
+
+.container-fluid {
+    flex: 1;
+    height: calc(100vh - 100px); 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+}
+
+.footer-image {
+    max-width: 100%;  
+    height: auto;     
+    max-height: 50px; 
+    margin-bottom: 1px; 
+}
+
+
+@font-face {
+    font-family: 'AluraFont';
+    src: url('../fonts/Got_Heroin.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'AluraFont2';
+    src: url('../fonts/Progress3DHollow.ttf') format('truetype'); 
+}
+
+.navbar-brand {
+    font-family: 'AluraFont', sans-serif;
+    font-size: 3.5rem; 
+}
+
+
+/* -------------------------------- */
+
+/* Contenedor del texto */
+#progressTextContainer {
+    font-family: 'AluraFont2', sans-serif;
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+/* Estilo para el texto */
+#progressText {
+    display: inline-block;
+    color: #566573; /* Color inicial del texto */
+    white-space: nowrap;
+    width: 0; /* Inicialmente, el texto no es visible */
+    overflow: hidden;
+    transition: width 1s ease; /* Transición suave para el progreso */
+}
+
+/* -------------------------------- */
+
+#coverPreview {
+    width: 200px; /* Definir el ancho del contenedor */
+    height: 200px; /* Definir la altura */
+    border: 2px dashed #ccc; /* Un borde punteado o sólido como marco */
+    display: flex;
+    justify-content: center; /* Centrar la imagen dentro del contenedor */
+    align-items: center; /* Asegura que la imagen esté centrada en el espacio */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+#coverImage {
+    max-width: 100%; /* Hace que la imagen no se salga del contenedor */
+    max-height: 100%; /* Limita la altura máxima de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste bien dentro del contenedor */
+}

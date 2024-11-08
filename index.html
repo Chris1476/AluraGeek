@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+    <link rel="shortcut icon" href="https://app.aluracursos.com/assets/images/aluraespanhol/favicon.ico">
+    <!-- Enlace a Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Barra de Título -->
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1 mx-auto text-center animate__heartBeat">AluraGeek</span>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row h-100">
+            <!-- Columna Izquierda: Formulario -->
+            <div class="col-md-4">
+                <h3>Agregar Disco</h3>
+                <form id="albumForm" class="mb-3">
+                    <div class="form-group">
+                        <label for="groupName">Grupo:</label>
+                        <input type="text" id="groupName" class="form-control" placeholder="Ingrese nombre del grupo o solista" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="albumName">Disco:</label>
+                        <input type="text" id="albumName" class="form-control" placeholder="Ingrese nombre del disco" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="coverLink">Portada:</label>
+                        <input type="url" id="coverLink" class="form-control" placeholder="Ingrese link de Portada" required>
+                    </div>
+                    <div id="coverPreview" class="text-center mt-3 mb-4">
+                        <img id="coverImage" src="" alt="Portada del disco" style="display: none; max-width: 200px; height: auto;">
+                    </div> 
+                    <button type="submit" class="btn bg-dark btn-block text-white">Agregar Disco</button>
+                </form>
+                <button id="searchDiscography" class="btn btn-secondary btn-block">Buscar Discografía</button>
+            </div>
+    
+            <!-- Columna Derecha: Listas de Discos -->
+            <div class="col-md-8 d-flex flex-column">
+                <h3>Discografía</h3>
+                <div class="album-section d-flex flex-column">
+                    <h5>Discos Agregados</h5>
+                    <div class="album-list" id="addedAlbumList"></div>
+                </div>
+                <div class="album-section d-flex flex-column mt-2">
+                    <h5>Discos desde API</h5>
+                    <div class="album-list" id="apiAlbumList"></div>
+                    <div id="progressTextContainer" class="text-center mt-2">
+                        <span id="progressText">DISCOGRAFIA CARGADA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <span>Made With</span>
+                <a href="https://www.last.fm/" target="_blank">
+                    <img src="img\pngegg.png" alt="LastFm" class="footer-image">
+                </a>
+        </div>
+        &copy; 2024 Discografía de Grupo. Todos los derechos reservados. <a href="mailto:cmc1476@gmail.com">Christian Matias Criado</a>
+    </footer>
+
+    <!-- Enlace a Bootstrap JavaScript y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js\script.js"></script>
+</body>
+</html>
