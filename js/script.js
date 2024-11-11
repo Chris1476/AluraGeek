@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function fetchDiscography(artist) {
-        const apiKey = "c651ba3c5608b5dc6be41f2f5dc015a4";
+        const apiKey = "";
         const url = `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=${apiKey}&format=json`;
 
         resetProgress(); // Resetear la barra de progreso antes de iniciar la búsqueda
