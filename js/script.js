@@ -120,11 +120,11 @@ function updateProgress(percentage) {
 
     // Cambiar el color del texto según el progreso
     if (percentage <= 33) {
-        progressText.style.color = '#566573'; // Verde
+        progressText.style.color = '#566573'; 
     } else if (percentage <= 66) {
-        progressText.style.color = '#273746'; // Naranja
+        progressText.style.color = '#273746'; 
     } else {
-        progressText.style.color = '#17202a'; // Rojo
+        progressText.style.color = '#17202a'; 
     }
 }
 
